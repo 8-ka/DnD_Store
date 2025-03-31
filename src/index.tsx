@@ -11,7 +11,25 @@ type Item = {
   name: string;
   price: string;
   description: string;
-  image?: string;
+  rarity: string;
+};
+
+// Функция для получения класса редкости
+const getRarityClass = (rarity: string): string => {
+  switch(rarity) {
+    case "Обычный":
+      return "rarity-common";
+    case "Необычный":
+      return "rarity-uncommon";
+    case "Редкий":
+      return "rarity-rare";
+    case "Очень редкий":
+      return "rarity-very-rare";
+    case "Легендарный":
+      return "rarity-legendary";
+    default:
+      return "";
+  }
 };
 
 const App = () => {
@@ -49,7 +67,7 @@ const App = () => {
   }, []);
 
   if (isLoading) {
-    return <div className="loading">Загрузка товаров...</div>;
+    return <div className="loading">Загрузка предметов...</div>;
   }
 
   if (error) {
@@ -58,13 +76,13 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>Магазин DnD</h1>
+      <h1>Каталог предметов DnD</h1>
       
       <div className="grid">
         {items.map((item) => (
           <div key={item.id} className="card">
-            {item.image && <img src={item.image} alt={item.name} />}
             <h2>{item.name}</h2>
+            <div className={`rarity ${getRarityClass(item.rarity)}`}>{item.rarity}</div>
             <p>{item.description}</p>
             <span className="price">{item.price}</span>
           </div>
@@ -73,7 +91,7 @@ const App = () => {
 
       {items.length === 0 && !isLoading && (
         <div className="empty-state">
-          Товары отсутствуют в магазине
+          Предметы отсутствуют в каталоге
         </div>
       )}
     </div>
