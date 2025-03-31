@@ -25,6 +25,24 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+      // Добавляем RGB версии цветов Telegram для использования с opacity
+      document.addEventListener('DOMContentLoaded', function() {
+        const hexToRgb = (hex) => {
+          const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+          hex = hex.replace(shorthandRegex, (m, r, g, b) => r + r + g + g + b + b);
+          const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+          return result ? `${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)}` : null;
+        };
+        
+        const bgColor = window.Telegram?.WebApp?.themeParams?.bg_color || '#ffffff';
+        const rgbBgColor = hexToRgb(bgColor);
+        
+        if (rgbBgColor) {
+          document.documentElement.style.setProperty('--tg-theme-bg-color-rgb', rgbBgColor);
+        }
+      });
+    </script>
     <title>DnD Магазин</title>
   </head>
   <body>
