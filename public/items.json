@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "name": "Меч Великого героя",
+      "price": "500 золота",
+      "description": "Меч, способный уничтожать любых врагов.",
+      "image": "https://example.com/images/sword.png"
+    },
+    {
+      "id": 2,
+      "name": "Щит Защитника",
+      "price": "300 золота",
+      "description": "Щит, который защитит от любых ударов.",
+      "image": "https://example.com/images/shield.png"
+    },
+    {
+      "id": 3,
+      "name": "Амулет Магии",
+      "price": "150 золота",
+      "description": "Амулет, усиливающий магические способности.",
+      "image": "https://example.com/images/amulet.png"
+    }
+  ]
+  
