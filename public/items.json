@@ -1,24 +1,45 @@
 [
     {
       "id": 1,
-      "name": "Меч Великого героя",
-      "price": "500 золота",
-      "description": "Меч, способный уничтожать любых врагов.",
-      "image": "https://example.com/images/sword.png"
+      "name": "Зелье лечения",
+      "price": "50 зм",
+      "description": "Восстанавливает 2d4+2 единиц здоровья",
+      "image": "https://i.imgur.com/YsUYwOH.png"
     },
     {
       "id": 2,
-      "name": "Щит Защитника",
-      "price": "300 золота",
-      "description": "Щит, который защитит от любых ударов.",
-      "image": "https://example.com/images/shield.png"
+      "name": "Кольчуга +1",
+      "price": "1500 зм",
+      "description": "Усиленная магией кольчуга. КД 16+1",
+      "image": "https://i.imgur.com/Ew8JMnK.png"
     },
     {
       "id": 3,
-      "name": "Амулет Магии",
-      "price": "150 золота",
-      "description": "Амулет, усиливающий магические способности.",
-      "image": "https://example.com/images/amulet.png"
+      "name": "Длинный меч",
+      "price": "15 зм",
+      "description": "Урон 1d8 рубящий, свойства: универсальное",
+      "image": "https://i.imgur.com/VHcGSkU.png"
+    },
+    {
+      "id": 4,
+      "name": "Свиток огненного шара",
+      "price": "150 зм",
+      "description": "Создает огненный шар 3-го уровня. Урон 8d6",
+      "image": "https://i.imgur.com/0C3nCfd.png"
+    },
+    {
+      "id": 5,
+      "name": "Сумка хранения",
+      "price": "500 зм",
+      "description": "Внеизмеренное пространство, вмещает до 250 кг",
+      "image": "https://i.imgur.com/h9HTEmR.png"
+    },
+    {
+      "id": 6,
+      "name": "Шляпа волшебника",
+      "price": "25 зм",
+      "description": "Стильная шляпа с магическими рунами",
+      "image": "https://i.imgur.com/y1hBmTQ.png"
     }
   ]
   
