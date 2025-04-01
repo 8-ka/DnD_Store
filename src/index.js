@@ -1,3 +1,8 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { useEffect, useState, useCallback } from "react";
+import { createRoot } from "react-dom/client";
+import "./styles.css";
+
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -18,10 +23,6 @@ var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
     }
     return to.concat(ar || Array.prototype.slice.call(from));
 };
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useEffect, useState, useCallback } from "react";
-import { createRoot } from "react-dom/client";
-import "./styles.css";
 // Безопасная проверка на существование Telegram WebApp API
 var tg = window.Telegram ? window.Telegram.WebApp : null;
 // Описания зелий лечения из справочника

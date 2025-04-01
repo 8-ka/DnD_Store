@@ -12,3 +12,6 @@ bot.onText(/\/wannabuy/, (msg) => {
       parse_mode: "Markdown"
     });
   });
+
+  console.log("Работает!..");
+  

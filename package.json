@@ -25,7 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "bot": "ts-node bot.ts"
+    "bot": "node bot.js"
   },
   "eslintConfig": {
     "extends": [
