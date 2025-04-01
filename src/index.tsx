@@ -45,6 +45,7 @@ const HEALING_POTIONS = [
 type Item = {
   id: number | string;
   name: string;
+  name_en: string;
   price: number | string;
   description: string;
   rarity: string;
@@ -317,7 +318,9 @@ const App = () => {
             healingPotions.map((item) => (
               <div key={item.id} className="card healing-potion-card">
                 <h2>{item.name}</h2>
-                <div className={`rarity ${getRarityClass(item.rarity)}`}>{item.rarity}</div>
+                <div className="rarity-container">
+                  <div className={`rarity ${getRarityClass(item.rarity)}`}>{item.rarity}</div>
+                </div>
                 <p>{item.description}</p>
                 <span className="price">{item.price}</span>
               </div>
@@ -363,7 +366,11 @@ const App = () => {
                           {rarityItems.map((item) => (
                             <div key={item.id} className="card">
                               <h2>{item.name}</h2>
+                              <h4>{item.name_en}</h4>
+                              <div className="rarity-container">
                               <div className={`rarity ${getRarityClass(item.rarity)}`}>{item.rarity}</div>
+
+                              </div>
                               <p>{item.description}</p>
                               <span className="price">{`${item.price} зм`}</span>
                             </div>
