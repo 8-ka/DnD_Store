@@ -1,6 +1,7 @@
 {
   "name": "telegram-dnd-shop",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "dependencies": {
     "@types/jest": "^27.5.2",
