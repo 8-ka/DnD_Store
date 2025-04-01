@@ -112,6 +112,7 @@ const App = () => {
   // Загрузка товаров
   useEffect(() => {
     setIsLoading(true);
+
     fetch("/items.json")
       .then((res) => {
         if (!res.ok) {
@@ -305,8 +306,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>Каталог предметов DnD</h1>
-      
+      <h1>Динь - Динь - Дон</h1>
       {/* Блок зелий лечения */}
       <div className="healing-potions-section">
         <h2 className="section-title">Зелья лечения</h2>
@@ -363,7 +363,7 @@ const App = () => {
                               <h2>{item.name}</h2>
                               <div className={`rarity ${getRarityClass(item.rarity)}`}>{item.rarity}</div>
                               <p>{item.description}</p>
-                              <span className="price">{item.price}</span>
+                              <span className="price">{`${item.price} зм`}</span>
                             </div>
                           ))}
                         </div>
