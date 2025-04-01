@@ -138,6 +138,7 @@ var App = function () {
             setError("Не удалось загрузить предметы. Пожалуйста, попробуйте позже.");
             setIsLoading(false);
         });
+        // eslint-disable-next-line
     }, []);
     // Проверяем необходимость обновления предметов каждую минуту
     useEffect(function () {
@@ -152,6 +153,7 @@ var App = function () {
         };
         var intervalId = setInterval(checkForUpdate, 60000); // Проверка каждую минуту
         return function () { return clearInterval(intervalId); };
+        // eslint-disable-next-line
     }, [items]);
     // Загрузка ранее сгенерированных предметов из localStorage или генерация новых
     var loadOrGenerateItems = function (allItems) {
@@ -212,6 +214,7 @@ var App = function () {
         setGeneratedItems(newGeneratedItems);
         localStorage.setItem(GENERATED_ITEMS_KEY, JSON.stringify(newGeneratedItems));
         localStorage.setItem(LAST_GENERATION_TIME_KEY, Date.now().toString());
+        // eslint-disable-next-line
     }, [items]);
     // Получаем случайные предметы из массива
     var getRandomItems = function (itemsArray, count) {
