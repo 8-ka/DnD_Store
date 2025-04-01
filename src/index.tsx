@@ -45,7 +45,7 @@ const HEALING_POTIONS = [
 type Item = {
   id: number | string;
   name: string;
-  price: string;
+  price: number | string;
   description: string;
   rarity: string;
   type: string;
@@ -53,14 +53,16 @@ type Item = {
 
 // Категории предметов
 const ITEM_CATEGORIES = [
-  "Волшебная палочка",
   "Доспех",
-  "Жезл",
-  "Зелье",
-  "Кольцо",
   "Оружие",
+  "Жезл",
+  "Снаряжение",
+  "Амулет",
+  "Кольцо",
+  "Компонент",
   "Посох",
-  "Чудесный предмет"
+  "Чудесный предмет",
+  "Свиток"
 ];
 
 // Типы редкости предметов
